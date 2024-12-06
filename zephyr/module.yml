@@ -1,0 +1,4 @@
+name: wmb-protobuf
+build:
+  cmake-ext: True
+  kconfig-ext: True
