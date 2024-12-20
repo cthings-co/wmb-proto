@@ -1,0 +1,2 @@
+wmb.proto.mb_protocol.DiagnosticsAnsFrame.modbus_configurations max_count:@CONFIG_MB_PROTOCOL_MAX_CONFIGURATIONS@
+wmb.proto.mb_protocol.ModbusResponseFrame.modbus_frame max_size:@MB_MODBUS_FRAME_MAXSIZE@
