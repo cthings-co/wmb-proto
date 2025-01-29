@@ -10,6 +10,11 @@ enum Acknowladge {
      ACKNOWLADGE_NACK = 0x77;
 }
 
+enum TransportType {
+     TRANSPORT_TYPE_UNKNOWN = 0;
+     TRANSPORT_TYPE_WIREPAS = 1;
+}
+
 message AckFrame {
      reserved 1;
      Acknowladge acknowladge = 2;
@@ -21,12 +26,11 @@ message PeriodicalConfiguration {
 }
 
 message DiagnosticsAnsFrame {
-     reserved 1;
+     reserved 1, 6;
      uint32 firmware_version = 2;
      uint32 device_id = 3;
-     uint32 transport_type = 4;
+     TransportType transport_type = 4;
      uint32 last_reset_cause = 5;
-     uint32 last_reset_trigger = 6;
      uint32 last_fault_address = 7;
      ModbusMode device_mode = 8;
      AntennaSettings antenna_settings = 9;
