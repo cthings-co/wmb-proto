@@ -18,10 +18,12 @@ message AntennaSettingsFrame {
      AntennaSettings antenna_settings = 2;
 }
 
-message BaudrateSettingsFrame {
+message PortSettingsFrame {
      reserved 1;
      ModbusPort modbus_port = 2;
-     ModbusBaud modbus_baud = 3; 
+     PortBaud port_baud = 3;
+     PortParity port_parity = 4;
+     PortStopBits port_stop_bits = 5;
 }
 
 message ModbusOneShotFrame {
@@ -43,7 +45,7 @@ message CmdFrame {
           EmptyFrame empty_frame = 1;
           DeviceModeFrame device_mode_frame = 2;
           AntennaSettingsFrame antenna_settings_frame  = 3;
-          BaudrateSettingsFrame baudrate_settings_frame  = 4;
+          PortSettingsFrame port_settings_frame  = 4;
           ModbusOneShotFrame modbus_one_shot_frame  = 5;
           ModbusPeriodicalFrame modbus_periodical_frame  = 6;
      }
