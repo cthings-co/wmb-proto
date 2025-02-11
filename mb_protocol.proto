@@ -12,7 +12,7 @@ enum Cmd {
      CMD_FOTA = 3;
      CMD_DEV_MODE = 4;
      CMD_ANTENA_CONFIG = 5;
-     CMD_BAUDRATE_CONFIG = 6;
+     CMD_PORT_CONFIG = 6;
      CMD_MODBUS_ONE_SHOT = 7;
      CMD_MODBUS_PERIODICAL = 8;
 }
