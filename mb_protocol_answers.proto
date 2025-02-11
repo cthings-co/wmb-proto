@@ -35,9 +35,13 @@ message DiagnosticsAnsFrame {
      ModbusMode device_mode = 8;
      AntennaSettings antenna_settings = 9;
      uint32 uptime = 10;
-     ModbusBaud baud_port_0 = 11;
-     ModbusBaud baud_port_1 = 12;
-     repeated PeriodicalConfiguration modbus_configurations = 13;
+     PortBaud baud_port_0 = 11;
+     PortBaud baud_port_1 = 12;
+     PortParity parity_port_0 = 13;
+     PortParity parity_port_1 = 14;
+     PortStopBits stop_bits_port_0 = 15;
+     PortStopBits stop_bits_port_1 = 16;
+     repeated PeriodicalConfiguration modbus_configurations = 17;
 }
 
 message ModbusResponseFrame {
