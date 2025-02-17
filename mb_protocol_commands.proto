@@ -5,39 +5,33 @@ package wmb.proto.mb_protocol;
 import "mb_protocol_enums.proto";
 
 message EmptyFrame {
-     reserved 1;
 }
 
 message DeviceModeFrame {
-     reserved 1;
-     ModbusMode device_mode = 2;
+     ModbusMode device_mode = 1;
 }
 
 message AntennaSettingsFrame {
-     reserved 1;
-     AntennaSettings antenna_settings = 2;
+     AntennaSettings antenna_settings = 1;
 }
 
 message PortSettingsFrame {
-     reserved 1;
-     ModbusPort modbus_port = 2;
-     PortBaud port_baud = 3;
-     PortParity port_parity = 4;
-     PortStopBits port_stop_bits = 5;
+     ModbusPort modbus_port = 1;
+     PortBaud port_baud = 2;
+     PortParity port_parity = 3;
+     PortStopBits port_stop_bits = 4;
 }
 
 message ModbusOneShotFrame {
-     reserved 1;
-     ModbusPort modbus_port = 2;
-     bytes modbus_frame = 3;
+     ModbusPort modbus_port = 1;
+     bytes modbus_frame = 2;
 }
 
 message ModbusPeriodicalFrame {
-     ModbusPort modbus_port = 2;
-     reserved 1;
-     uint32 configuration_index = 3;
-     uint32 interval = 4;
-     bytes modbus_frame = 5;
+     ModbusPort modbus_port = 1;
+     uint32 configuration_index = 2;
+     uint32 interval = 3;
+     bytes modbus_frame = 4;
 }
 
 message CmdFrame {
