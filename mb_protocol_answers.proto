@@ -16,39 +16,35 @@ enum TransportType {
 }
 
 message AckFrame {
-     reserved 1;
-     Acknowladge acknowladge = 2;
+     Acknowladge acknowladge = 1;
 }
 
 message PeriodicalConfiguration {
-     reserved 1;
-     uint32 configuration = 2;
+     uint32 configuration = 1;
 }
 
 message DiagnosticsAnsFrame {
-     reserved 1, 6;
-     uint32 firmware_version = 2;
-     uint32 device_id = 3;
-     TransportType transport_type = 4;
-     uint32 last_reset_cause = 5;
-     uint32 last_fault_address = 7;
-     ModbusMode device_mode = 8;
-     AntennaSettings antenna_settings = 9;
-     uint32 uptime = 10;
-     PortBaud baud_port_0 = 11;
-     PortBaud baud_port_1 = 12;
-     PortParity parity_port_0 = 13;
-     PortParity parity_port_1 = 14;
-     PortStopBits stop_bits_port_0 = 15;
-     PortStopBits stop_bits_port_1 = 16;
-     repeated PeriodicalConfiguration modbus_configurations = 17;
+     uint32 firmware_version = 1;
+     uint32 device_id = 2;
+     TransportType transport_type = 3;
+     uint32 last_reset_cause = 4;
+     uint32 last_fault_address = 5;
+     ModbusMode device_mode = 6;
+     AntennaSettings antenna_settings = 7;
+     uint32 uptime = 8;
+     PortBaud baud_port_0 = 9;
+     PortBaud baud_port_1 = 10;
+     PortParity parity_port_0 = 11;
+     PortParity parity_port_1 = 12;
+     PortStopBits stop_bits_port_0 = 13;
+     PortStopBits stop_bits_port_1 = 14;
+     repeated PeriodicalConfiguration modbus_configurations = 15;
 }
 
 message ModbusResponseFrame {
-     reserved 1;
-     ModbusPort modbus_port = 2;
-     uint32 configuration_index = 3;
-     bytes modbus_frame = 4;
+     ModbusPort modbus_port = 1;
+     uint32 configuration_index = 2;
+     bytes modbus_frame = 3;
 }
 
 message AnswerFrame {
