@@ -24,7 +24,6 @@ message Payload {
 }
 
 message MbMessage {
-     reserved 6;
      uint32 header = 1;
      uint32 version = 2;
      Cmd cmd = 3;
