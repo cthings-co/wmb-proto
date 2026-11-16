@@ -14,6 +14,8 @@ enum Cmd {
      CMD_PORT_CONFIG = 5;
      CMD_MODBUS_ONE_SHOT = 6;
      CMD_MODBUS_PERIODICAL = 7;
+     // Protocol v2: clear radio provisioning and restart Open Join.
+     CMD_NETWORK_RESET = 8;
 }
 
 message Payload {
